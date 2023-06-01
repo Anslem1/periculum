@@ -79,7 +79,7 @@ function Client() {
                                    <div>
                                         <p>
                                              Prominent Account Location
-                                             <span>30%</span>
+                                             <span >Central/Eastern Region</span>
                                         </p>
                                    </div>
                               </div>
@@ -107,32 +107,31 @@ function Client() {
                                    </div>
                               </div>
                          </div>
-                              <div className="recommendation-container">
-                                   <h1>
-                                        Recommendation{" "}
-                                        <span>
-                                             <ArrowDown />
-                                        </span>
-                                   </h1>
-                                   <div>
-                                        <ul>
-                                             <li>
-                                                  Develop a strategy on
-                                                  reactivation campaign for the
-                                                  dormant clients.
-                                             </li>
-                                             <li>
-                                                  Push digital channels (USSD)
-                                                  to clients for credit and
-                                                  debit transactions
-                                             </li>
-                                             <li>
-                                                  POS Machines/Merchant Systems
-                                                  for cash collection
-                                             </li>
-                                        </ul>
-                                   </div>
+                         <div className="recommendation-container">
+                              <h1>
+                                   Recommendation{" "}
+                                   <span>
+                                        <ArrowDown />
+                                   </span>
+                              </h1>
+                              <div>
+                                   <ul>
+                                        <li>
+                                             Develop a strategy on reactivation
+                                             campaign for the dormant clients.
+                                        </li>
+                                        <li>
+                                             Push digital channels (USSD) to
+                                             clients for credit and debit
+                                             transactions
+                                        </li>
+                                        <li>
+                                             POS Machines/Merchant Systems for
+                                             cash collection
+                                        </li>
+                                   </ul>
                               </div>
+                         </div>
                     </div>
                     <div className="prop-div"></div>
                </div>

@@ -57,6 +57,10 @@ interface CustomerDataProps {
      data?: Customer;
 }
 
+interface Toggle {
+     [key: string]: boolean;
+}
+
 const ReportComponent: React.FC<ReportProps> = ({
      header,
      bankProfileHeaderClassName,
@@ -79,9 +83,10 @@ const ReportComponent: React.FC<ReportProps> = ({
      const [currentCustomerPage, setCurrentCustomerPage] = useState(1);
      const customersPerPage = 9;
 
-     const [toggleSelect, setToggleSelect] = useState<{
-          [key: string]: boolean;
-     }>({});
+     const [toggleSelect, setToggleSelect] = useState<Toggle>({
+          "1": true,
+     });
+     const [toggleFilter, setToggleFilter] = useState<Toggle>({});
      const [isSearch, setIsSearch] = useState(false);
      const [showSort, setShowSort] = useState(false);
      const [showNewCustomerOverlay, setShowNewCustomerOverlay] =
@@ -94,8 +99,17 @@ const ReportComponent: React.FC<ReportProps> = ({
           setSegmentInput(e.target.value);
      };
 
+     const [sortStartDate, setSortStartDate] = useState("");
+     const [sortEndDate, setSortEndDate] = useState("");
+
      function toggleSelectInput(identifier: string): void {
           setToggleSelect((prevToogle) => ({
+               [identifier]: !prevToogle[identifier],
+          }));
+     }
+
+     function toggleFilterInput(identifier: string): void {
+          setToggleFilter((prevToogle) => ({
                [identifier]: !prevToogle[identifier],
           }));
      }
@@ -297,28 +311,31 @@ const ReportComponent: React.FC<ReportProps> = ({
                <>
                     <div className="new-customer-container"></div>
 
-                    <div
-                         className="new-customer-content"
-                         onClick={() => setShowSort(false)}
-                         style={{backgroundColor:'green'}}
-                    >
+                    <div className="new-customer-content">
                          <div>
                               <div className="sort-container">
                                    <article>
                                         <p>Category</p>
+                                        <section
+                                             onClick={() => {
+                                                  setShowSort(false);
+                                             }}
+                                        >
+                                             <CancelIcon />
+                                        </section>
                                         <div>
                                              <p>
-                                                  {toggleSelect["1"] ? (
+                                                  {toggleFilter["1"] ? (
                                                        <CheckboxIcon
                                                             handleClick={
-                                                                 toggleSelectInput
+                                                                 toggleFilterInput
                                                             }
                                                             identifier="1"
                                                        />
                                                   ) : (
                                                        <UnCheckedCheckbox
                                                             handleClick={
-                                                                 toggleSelectInput
+                                                                 toggleFilterInput
                                                             }
                                                             identifier="1"
                                                        />
@@ -326,17 +343,17 @@ const ReportComponent: React.FC<ReportProps> = ({
                                                   The Agric Client
                                              </p>
                                              <p>
-                                                  {toggleSelect["2"] ? (
+                                                  {toggleFilter["2"] ? (
                                                        <CheckboxIcon
                                                             handleClick={
-                                                                 toggleSelectInput
+                                                                 toggleFilterInput
                                                             }
                                                             identifier="2"
                                                        />
                                                   ) : (
                                                        <UnCheckedCheckbox
                                                             handleClick={
-                                                                 toggleSelectInput
+                                                                 toggleFilterInput
                                                             }
                                                             identifier="2"
                                                        />
@@ -344,17 +361,17 @@ const ReportComponent: React.FC<ReportProps> = ({
                                                   The Micro Techs
                                              </p>
                                              <p>
-                                                  {toggleSelect["3"] ? (
+                                                  {toggleFilter["3"] ? (
                                                        <CheckboxIcon
                                                             handleClick={
-                                                                 toggleSelectInput
+                                                                 toggleFilterInput
                                                             }
                                                             identifier="3"
                                                        />
                                                   ) : (
                                                        <UnCheckedCheckbox
                                                             handleClick={
-                                                                 toggleSelectInput
+                                                                 toggleFilterInput
                                                             }
                                                             identifier="3"
                                                        />
@@ -362,17 +379,17 @@ const ReportComponent: React.FC<ReportProps> = ({
                                                   The Retail Techs
                                              </p>
                                              <p>
-                                                  {toggleSelect["4"] ? (
+                                                  {toggleFilter["4"] ? (
                                                        <CheckboxIcon
                                                             handleClick={
-                                                                 toggleSelectInput
+                                                                 toggleFilterInput
                                                             }
                                                             identifier="4"
                                                        />
                                                   ) : (
                                                        <UnCheckedCheckbox
                                                             handleClick={
-                                                                 toggleSelectInput
+                                                                 toggleFilterInput
                                                             }
                                                             identifier="4"
                                                        />
@@ -380,17 +397,17 @@ const ReportComponent: React.FC<ReportProps> = ({
                                                   The Loyalists
                                              </p>
                                              <p>
-                                                  {toggleSelect["5"] ? (
+                                                  {toggleFilter["5"] ? (
                                                        <CheckboxIcon
                                                             handleClick={
-                                                                 toggleSelectInput
+                                                                 toggleFilterInput
                                                             }
                                                             identifier="5"
                                                        />
                                                   ) : (
                                                        <UnCheckedCheckbox
                                                             handleClick={
-                                                                 toggleSelectInput
+                                                                 toggleFilterInput
                                                             }
                                                             identifier="5"
                                                        />
@@ -415,9 +432,25 @@ const ReportComponent: React.FC<ReportProps> = ({
                                                   name=""
                                                   id=""
                                                   placeholder="mm-yy"
+                                                  onChange={(e) =>
+                                                       setSortStartDate(
+                                                            e.target.value
+                                                       )
+                                                  }
+                                                  value={sortStartDate}
                                              />
                                              <span>-</span>
-                                             <input type="date" name="" id="" />
+                                             <input
+                                                  type="date"
+                                                  name=""
+                                                  id=""
+                                                  onChange={(e) =>
+                                                       setSortEndDate(
+                                                            e.target.value
+                                                       )
+                                                  }
+                                                  value={sortEndDate}
+                                             />
                                         </div>
                                    </div>
                                    <div
@@ -435,7 +468,17 @@ const ReportComponent: React.FC<ReportProps> = ({
                                                        "rgba(64, 123, 255, 1)",
                                                   color: "#fff",
                                              }}
-                                             onClick={() => navigate("/client")}
+                                             onClick={() => {
+                                                  if (
+                                                       sortStartDate &&
+                                                       sortEndDate
+                                                  ) {
+                                                       navigate("/client");
+                                                  } else
+                                                       alert(
+                                                            "Input a date to filter"
+                                                       );
+                                             }}
                                         >
                                              Apply Filter
                                         </p>
@@ -565,6 +608,7 @@ const ReportComponent: React.FC<ReportProps> = ({
           function handleSearchRequest() {
                setShowSearchCustomer(false);
                setIsSearch(true);
+               setShowSort(false);
           }
 
           return (
@@ -703,11 +747,12 @@ const ReportComponent: React.FC<ReportProps> = ({
                                              }
                                              placeholder="Segment Customer"
                                              readOnly
-                                             onClick={() =>
+                                             onClick={() => {
                                                   setShowSearchCustomer(
                                                        (prevShow) => !prevShow
-                                                  )
-                                             }
+                                                  );
+                                                  setShowSort(false);
+                                             }}
                                         />
                                         <div className="icon-container">
                                              <ProfileIcon />
@@ -719,7 +764,12 @@ const ReportComponent: React.FC<ReportProps> = ({
                                    </span>
                               </div>
                               <div>
-                                   <p onClick={() => setShowSort(true)}>
+                                   <p
+                                        onClick={() => {
+                                             setShowSort(true);
+                                             setShowSearchCustomer(false);
+                                        }}
+                                   >
                                         <FIlterIcon /> Sort
                                    </p>
                               </div>
