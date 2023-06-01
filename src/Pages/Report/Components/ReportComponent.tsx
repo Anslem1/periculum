@@ -93,7 +93,7 @@ const ReportComponent: React.FC<ReportProps> = ({
           useState(false);
      const [isPaymentPage, setIsPaymentPage] = useState(false);
      const [isPaymentSuccess, setIsPaymentSuccess] = useState(false);
-     const [activeTab, setActiveTab] = useState<string>("Active");
+     const [activeTab, setActiveTab] = useState<string>("All");
 
      const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
           setSegmentInput(e.target.value);

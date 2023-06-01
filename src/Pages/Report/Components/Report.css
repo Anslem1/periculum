@@ -274,6 +274,9 @@
 .customer-info-header {
      display: grid;
      grid-template-columns: repeat(5, 1fr);
+     padding: 10px;
+
+
 }
 .customer-info-header p {
      font-family: Manrope;
@@ -321,7 +324,7 @@
 
      align-items: center;
      background-color: #fff;
-     padding: 5px 0 5px 5px;
+     padding: 5px;
 }
 .customer-data-container > div > div p {
      font-family: Manrope;
