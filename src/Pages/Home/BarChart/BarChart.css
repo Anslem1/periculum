@@ -1,0 +1,15 @@
+.chartMenu p {
+     padding:  10px 0;
+     font-size: 15px;
+
+     text-align: center;
+     background: #2f74dd;
+     /* position: absolute; */
+     width: 100% ;
+
+     font-family: Manrope;
+     
+
+font-size: 12px;
+     color: #fff;
+}

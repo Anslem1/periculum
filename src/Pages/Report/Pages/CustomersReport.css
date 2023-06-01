@@ -1,0 +1,21 @@
+.sidebar-report-container {
+     display: grid;
+     /* grid-template-columns: 3fr 10fr; */
+}
+
+.sidebar-report-container > div:nth-of-type(2) {
+     background-color: black;
+     /* border: 40px solid; */
+     background: #f5f7fa;
+     /* height: 50px; */
+     /* width: 90%; */
+}
+
+
+.report-component-sidebar {
+     background-color: green !important;
+     /* width: 100%; */
+}
+.Report{
+    margin: 0 !important;
+}

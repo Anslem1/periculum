@@ -1,0 +1,155 @@
+.select-container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.select-container > section {
+     /* padding-right: 20px; */
+     width: 25%;
+     outline: none;
+     border: none;
+     font-size: 15px;
+     font-family: Manrope;
+     cursor: pointer;
+     background-color: #fff;
+     font-weight: 600;
+     /* width: 100%; */
+     position: relative;
+}
+
+.select-container > section p {
+     font-family: manrope;
+     padding-right: 40px;
+}
+.select-container > section > div {
+     display: flex;
+
+     padding: 20px;
+     align-items: center;
+     justify-content: space-between;
+     /* border: 1px solid; */
+}
+
+.select-container > section > div > div {
+     position: absolute;
+     width: 100%;
+     top: 70px;
+     right: 0;
+     background-color: #fff;
+     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.select-container > section > div > div > div {
+     padding: 30px;
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+}
+
+.select-container > section > div {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.select-container > div {
+     display: flex;
+     align-items: center;
+     gap: 30px;
+     justify-content: space-between;
+     border: 1px solid rgba(64, 123, 255, 1);
+     padding: 10px 10px;
+     position: relative;
+}
+.select-container > div p {
+     font-family: manrope;
+     padding-right: 40px;
+}
+
+.overlay-input-container {
+     position: absolute;
+     width: 100%;
+     top: 50px;
+     right: 0;
+     background-color: #fff;
+     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+     /* padding: 10px; */
+     z-index: 99999;
+}
+
+.overlay-input-container > div {
+     padding: 10px 10px;
+}
+
+.overlay-input-container > div > p {
+     margin-bottom: 20px;
+}
+
+.overlay-input-container > div > div {
+     display: grid;
+     gap: 20px;
+}
+.overlay-input-container > div > button {
+     margin-top: 20px;
+     padding: 7px 20px;
+     color: #fff;
+     background-color: rgba(64, 123, 255, 1);
+     border: none;
+     font-family: Manrope;
+     cursor: pointer;
+}
+
+.inactive-btn {
+     background-color: rgba(220, 229, 255, 1) !important;
+}
+
+.overlay-input-container > div > div > div {
+     display: grid;
+     gap: 5px;
+}
+.overlay-input-container > div > div > div label {
+     font-family: Manrope;
+     font-size: 10px;
+}
+.overlay-input-container > div > div > div input {
+     padding: 10px 5px;
+     background-color: rgba(231, 239, 255, 1);
+     outline: none;
+     border: 1px solid rgba(64, 123, 255, 1);
+     padding: 10px;
+     border-radius: 6px;
+     cursor: pointer;
+
+     /* border: ; */
+}
+.overlay-input-container > div > div > div input {
+     padding: 10px 5px;
+}
+.overlay-input-container p {
+     font-family: Manrope;
+     font-size: 15px;
+}
+
+@media screen and (max-width: 840px) {
+     .select-container {
+          width: 90%;
+     }
+}
+
+@media screen and (max-width: 450px) {
+     .select-container {
+          flex-direction: column;
+          gap: 20px;
+     }
+
+     .select-container section {
+          width: 100%;
+     }
+
+     .select-container section > div {
+          padding: 10px;
+     }
+     .select-container div {
+          width: 90%;
+     }
+     
+}

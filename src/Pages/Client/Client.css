@@ -1,0 +1,120 @@
+.client-container {
+     display: grid;
+     grid-template-columns: 1.1fr 15fr 0.5fr;
+     height: 100vh;
+     overflow-y: scroll;
+}
+
+.client-container::-webkit-scrollbar {
+     display: none;
+}
+
+.client-container > div {
+     margin-top: 120px;
+}
+
+.client-header {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.client-header {
+     margin-bottom: 30px;
+}
+.client-header > h1,
+.client-header > span {
+     font-family: Manrope;
+     font-weight: 700;
+}
+
+.client-header > span {
+     font-family: Manrope;
+     font-weight: 700;
+     padding: 15px;
+     color: rgba(4, 103, 75, 1);
+     background: rgba(201, 236, 226, 1);
+}
+
+.client-average-container h1,
+.demographic-container h1,
+.loan-take-container h1 {
+     font-family: Manrope;
+     font-size: 20px;
+     font-weight: 500;
+     margin-top: 30px;
+     margin-bottom: 20px;
+}
+.client-average-container div div p,
+.demographic-container div div p,
+.loan-take-container div div p {
+     padding: 50px;
+     font-family: Manrope;
+}
+
+.client-average-container span,
+.demographic-container span,
+.loan-take-container span {
+     display: block;
+     font-size: 30px;
+     font-weight: 700;
+}
+
+.client-average-container > div {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+}
+.client-average-container > div div,
+.loan-take-container > div > div {
+     background-color: #fff;
+}
+.client-average-container > div div:nth-of-type(2) p,
+.loan-take-container > div > div:nth-of-type(2) p {
+     border-left: 1px solid rgba(64, 123, 255, 1);
+     border-right: 1px solid rgba(64, 123, 255, 1);
+}
+
+.demographic-container > div {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+}
+.demographic-container > div div {
+     background-color: rgba(42, 56, 164, 1);
+}
+.demographic-container > div div p {
+     color: #fff;
+}
+
+.loan-take-container > div {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+}
+
+.recommendation-container {
+     padding-bottom: 30px;
+}
+.recommendation-container > h1 {
+     font-size: 20px;
+     margin-top: 30px;
+     margin-bottom: 20px;
+     font-family: Manrope;
+     display: flex;
+     gap: 10px;
+     align-items: center;
+}
+
+.recommendation-container > div {
+     list-style-type: decimal;
+     padding: 40px;
+     display: grid;
+
+     background-color: #fff;
+     font-family: Manrope;
+     font-size: 18px;
+     font-weight: 500;
+     width: 35%;
+     /* padding-bottom:30px; */
+}
+.recommendation-container > div > ul li {
+     list-style-type: decimal;
+}
