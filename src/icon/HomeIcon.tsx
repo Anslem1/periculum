@@ -1,6 +1,10 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 function Home() {
+     const loaction = useLocation();
+
+     // alert(loaction.pathname);
      return (
           <svg
                width="26"
@@ -8,6 +12,12 @@ function Home() {
                viewBox="0 0 26 28"
                fill="none"
                xmlns="http://www.w3.org/2000/svg"
+               style={{
+                    fill:
+                         loaction.pathname === "/"
+                              ? "rgba(64, 123, 255, 1)"
+                              : undefined,
+               }}
           >
                <path
                     fillRule="evenodd"

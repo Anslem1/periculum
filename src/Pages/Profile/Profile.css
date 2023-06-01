@@ -63,7 +63,7 @@
 }
 
 .profile-about-container > div > div {
-     border-radius: 20px;
+    
 }
 .profile-about-container > h1 {
      font-family: Manrope;
@@ -89,13 +89,8 @@
      background-color: rgba(217, 229, 255, 1);
 }
 
-.first {
-     border-radius: 20px 20px 0 0;
-}
 
-.last {
-     border-radius: 0px 0px 20px 20px;
-}
+
 
 @media screen and (max-width: 1200px) {
      .prop-div {
