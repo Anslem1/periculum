@@ -161,7 +161,6 @@
 .pillar-distribution-container > div > div {
      padding: 20px;
      background-color: #fff;
-     /* width: 90%; */
 }
 
 @media screen and (max-width: 1500px) {
@@ -271,7 +270,7 @@
      }
 }
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 700px) {
      .home-container {
           width: 86%;
      }
@@ -290,7 +289,7 @@
           gap: 60px;
      }
      .pillar-distribution-container > div {
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: 1fr;
      }
 }
 @media screen and (max-width: 450px) {

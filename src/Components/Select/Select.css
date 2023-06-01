@@ -2,6 +2,8 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
+     flex-wrap: wrap;
+     gap: 20px;
 }
 .select-container > section {
      /* padding-right: 20px; */
@@ -59,6 +61,7 @@
      border: 1px solid rgba(64, 123, 255, 1);
      padding: 10px 10px;
      position: relative;
+     z-index: 0;
 }
 .select-container > div p {
      font-family: manrope;
@@ -70,6 +73,7 @@
      width: 100%;
      top: 50px;
      right: 0;
+     z-index: 7;
      background-color: #fff;
      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
      /* padding: 10px; */
@@ -129,9 +133,14 @@
      font-size: 15px;
 }
 
+
 @media screen and (max-width: 840px) {
      .select-container {
-          width: 90%;
+          width: 100%;
+         
+     }
+     .select-container > section {
+          width: initial;
      }
 }
 
@@ -142,7 +151,7 @@
      }
 
      .select-container section {
-          width: 100%;
+          /* width: 100%; */
      }
 
      .select-container section > div {
@@ -151,5 +160,4 @@
      .select-container div {
           width: 90%;
      }
-     
 }
