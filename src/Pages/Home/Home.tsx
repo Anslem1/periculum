@@ -8,6 +8,7 @@ import RadialChart from "./RadialChart";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store";
 import BarChart from "./BarChart/BarChart";
+import { pillarData } from "./PillarData";
 
 const data = [100, 92, 75, 50, 80];
 const labels = [
@@ -88,37 +89,26 @@ const Home: React.FC = () => {
                          </div>
                          <div className="pillar-distribution-container">
                               <h1>PILLAR DISTRIBUTION</h1>
+                              <section>
+                                   {pillarData.map((data) => (
+                                        <p>
+                                             <span
+                                                  style={{
+                                                       backgroundColor:
+                                                            data.colorIdentifier,
+                                                  }}
+                                             ></span>
+                                             {data.pillar}{" "}
+                                             <span>({data.abbe})</span>
+                                        </p>
+                                   ))}
+                              </section>
                               <div>
-                                   <BarChart
-                                        text={"The Agric Client"}
-                                        data={[
-                                             18000, 14000, 12600, 12000, 10000,
-                                        ]}
-                                   />
-                                   <BarChart
-                                        text={"The Micro Techs"}
-                                        data={[
-                                             18000, 14000, 12600, 12000, 10000,
-                                        ]}
-                                   />
-                                   <BarChart
-                                        text={" The Corporates"}
-                                        data={[
-                                             18000, 14000, 12600, 12000, 10000,
-                                        ]}
-                                   />
-                                   <BarChart
-                                        text={"The Retail Tech"}
-                                        data={[
-                                             18000, 14000, 12600, 12000, 10000,
-                                        ]}
-                                   />
-                                   <BarChart
-                                        text={" The Loyalists"}
-                                        data={[
-                                             18000, 14000, 12600, 12000, 10000,
-                                        ]}
-                                   />
+                                   <BarChart text={"The Agric Client"} />
+                                   <BarChart text={"The Micro Techs"} />
+                                   <BarChart text={" The Corporates"} />
+                                   <BarChart text={"The Retail Tech"} />
+                                   <BarChart text={" The Loyalists"} />
                               </div>
                          </div>
                     </div>

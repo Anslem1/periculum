@@ -151,13 +151,35 @@
 .pillar-distribution-container {
      padding-bottom: 40px;
 }
+.pillar-distribution-container > h1 {
+     font-size: 20px;
+     margin-bottom: 10px;
+}
 
 .pillar-distribution-container > div {
      display: grid;
      grid-template-columns: 1fr 1fr 1fr;
-     /* width: 90%; */
-     /* justify-items: center; */
+
      gap: 30px;
+}
+.pillar-distribution-container > section {
+     display: flex;
+     gap: 20px;
+     margin-bottom: 20px;
+}
+.pillar-distribution-container > section p {
+     display: flex;
+     gap: 5px;
+     font-family: Manrope;
+     font-size: 15px;
+     align-items: center;
+}
+.pillar-distribution-container > section span:nth-of-type(1) {
+     display: flex;
+     gap: 5px;
+     width: 10px;
+     height: 10px;
+     border-radius: 50%;
 }
 .pillar-distribution-container > div > div {
      padding: 20px;

@@ -5,7 +5,6 @@ import { data } from "./data";
 
 interface BarProps {
      text: string;
-     data: number[];
 }
 
 function ChartComponent({ text }: BarProps) {
