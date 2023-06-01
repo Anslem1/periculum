@@ -71,13 +71,13 @@ const Home: React.FC = () => {
                          <div className="average-component-container">
                               <AverageComponent
                                    header={"Averege Age"}
-                                   headerSpan={"in numbers"}
+                                   headerSpan={"in years"}
                                    averageData={averageDataInNumbers}
                               />
 
                               <AverageComponent
                                    header={"Average Transactional Value"}
-                                   headerSpan={"credit"}
+                                   headerSpan={"Credit"}
                                    averageData={averageDataInCredits}
                               />
                          </div>
@@ -89,11 +89,11 @@ const Home: React.FC = () => {
                          <div className="pillar-distribution-container">
                               <h1>PILLAR DISTRIBUTION</h1>
                               <div>
-                                   <BarChart text={"The Corporates"} />
+                                   <BarChart text={"The Agric Client"} />
                                    <BarChart text={"The Micro Techs"} />
-                                   <BarChart text={"The Loyalists"} />
-                                   <BarChart text={"Agric Client"} />
+                                   <BarChart text={" The Corporates"} />
                                    <BarChart text={"The Retail Tech"} />
+                                   <BarChart text={" The Loyalists"} />
                               </div>
                          </div>
                     </div>

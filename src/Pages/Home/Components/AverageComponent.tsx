@@ -28,11 +28,12 @@ const AverageComponent: React.FC<AverageProps> = ({
                               {average.name}
                               <span>
                                    {" "}
-                                   {headerSpan === "credit"
+                                   {headerSpan === "Credit"
                                         ? formattedCurrency.format(
                                                average.number
                                           )
-                                        : average.number}
+                                        : average.number
+                                   }
                               </span>
                          </p>
                     ))}

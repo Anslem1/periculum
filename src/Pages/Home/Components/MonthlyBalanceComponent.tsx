@@ -14,7 +14,7 @@ function MontlyBalanceComponent() {
                          <p>
                               {balance.name}{" "}
                               <span>
-                                   {balance.name.includes("Retail")
+                                   {balance.name.includes("Micro")
                                         ? "----" +
                                           formattedCurrency.format(
                                                balance.balance

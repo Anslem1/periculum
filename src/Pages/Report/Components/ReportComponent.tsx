@@ -88,7 +88,7 @@ const ReportComponent: React.FC<ReportProps> = ({
           useState(false);
      const [isPaymentPage, setIsPaymentPage] = useState(false);
      const [isPaymentSuccess, setIsPaymentSuccess] = useState(false);
-     const [activeTab, setActiveTab] = useState<string>("All");
+     const [activeTab, setActiveTab] = useState<string>("Active");
 
      const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
           setSegmentInput(e.target.value);
@@ -296,8 +296,13 @@ const ReportComponent: React.FC<ReportProps> = ({
           return (
                <>
                     <div className="new-customer-container"></div>
-                    <div className="new-customer-content">
-                         <div onClick={() => setShowSort(false)}>
+
+                    <div
+                         className="new-customer-content"
+                         onClick={() => setShowSort(false)}
+                         style={{backgroundColor:'green'}}
+                    >
+                         <div>
                               <div className="sort-container">
                                    <article>
                                         <p>Category</p>

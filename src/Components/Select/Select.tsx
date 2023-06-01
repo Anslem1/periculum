@@ -12,7 +12,6 @@ function Select(): JSX.Element {
      const [showDateOverlay, setShowDateOverlay] = useState(false);
      const [displayText, setDisplayText] = useState("");
      const [showSegmentOverlay, setShowSegmentOverlay] = useState(false);
-  
 
      const location = useLocation();
 
@@ -21,7 +20,6 @@ function Select(): JSX.Element {
                return;
           }
           navigate("/all-customers");
-
 
           setShowDateOverlay(false);
      }
@@ -38,7 +36,10 @@ function Select(): JSX.Element {
           navigate(url);
      }
 
-
+     function toogleSelectSegment() {
+          setShowSegmentOverlay((prev) => !prev);
+          setShowDateOverlay(false);
+     }
 
      function ShowInputDateOverlay() {
           return (
@@ -90,11 +91,7 @@ function Select(): JSX.Element {
           <>
                <div className="select-container">
                     <section>
-                         <div
-                              onClick={() =>
-                                   setShowSegmentOverlay((prev) => !prev)
-                              }
-                         >
+                         <div onClick={toogleSelectSegment}>
                               <p>{displayText}</p>
                               <HomeArrowDownIcon />
                               {showSegmentOverlay && (
@@ -122,12 +119,13 @@ function Select(): JSX.Element {
                          </div>
                     </section>
 
-                    <div className={`${showSegmentOverlay && 'show-date'}`}>
+                    <div className={`${showSegmentOverlay && "show-date"}`}>
                          <p>Loan Data Period </p>
                          <CalendarIcon
-                              handleClick={() =>
-                                   setShowDateOverlay((prev) => !prev)
-                              }
+                              handleClick={() => {
+                                   setShowDateOverlay((prev) => !prev);
+                                   setShowSegmentOverlay(false);
+                              }}
                          />
                          {showDateOverlay && <ShowInputDateOverlay />}
                     </div>

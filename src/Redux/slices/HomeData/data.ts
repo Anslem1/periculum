@@ -12,7 +12,7 @@ export const averageDataInNumbers = [
           number: 43,
      },
      {
-          name: "The The Loyalists",
+          name: "The Loyalists",
           number: 50,
      },
      {
@@ -34,7 +34,7 @@ export const averageDataInCredits = [
           number: 1689,
      },
      {
-          name: "The The Loyalists",
+          name: "The Loyalists",
           number: 300816,
      },
      {
