@@ -17,6 +17,8 @@ import SuccessfulIcon from "../../../icon/SuccessfulIcon";
 import FIlterIcon from "../../../icon/FIlterIcon";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../store";
+import UnCheckedCheckbox from "../../../icon/UnCheckedCheckbox";
+import CheckboxIcon from "../../../icon/CheckboxIcon";
 
 interface Customer {
      name: string;
@@ -297,6 +299,101 @@ const ReportComponent: React.FC<ReportProps> = ({
                     <div className="new-customer-content">
                          <div onClick={() => setShowSort(false)}>
                               <div className="sort-container">
+                                   <article>
+                                        <p>Category</p>
+                                        <div>
+                                             <p>
+                                                  {toggleSelect["1"] ? (
+                                                       <CheckboxIcon
+                                                            handleClick={
+                                                                 toggleSelectInput
+                                                            }
+                                                            identifier="1"
+                                                       />
+                                                  ) : (
+                                                       <UnCheckedCheckbox
+                                                            handleClick={
+                                                                 toggleSelectInput
+                                                            }
+                                                            identifier="1"
+                                                       />
+                                                  )}
+                                                  The Agric Client
+                                             </p>
+                                             <p>
+                                                  {toggleSelect["2"] ? (
+                                                       <CheckboxIcon
+                                                            handleClick={
+                                                                 toggleSelectInput
+                                                            }
+                                                            identifier="2"
+                                                       />
+                                                  ) : (
+                                                       <UnCheckedCheckbox
+                                                            handleClick={
+                                                                 toggleSelectInput
+                                                            }
+                                                            identifier="2"
+                                                       />
+                                                  )}
+                                                  The Micro Techs
+                                             </p>
+                                             <p>
+                                                  {toggleSelect["3"] ? (
+                                                       <CheckboxIcon
+                                                            handleClick={
+                                                                 toggleSelectInput
+                                                            }
+                                                            identifier="3"
+                                                       />
+                                                  ) : (
+                                                       <UnCheckedCheckbox
+                                                            handleClick={
+                                                                 toggleSelectInput
+                                                            }
+                                                            identifier="3"
+                                                       />
+                                                  )}
+                                                  The Retail Techs
+                                             </p>
+                                             <p>
+                                                  {toggleSelect["4"] ? (
+                                                       <CheckboxIcon
+                                                            handleClick={
+                                                                 toggleSelectInput
+                                                            }
+                                                            identifier="4"
+                                                       />
+                                                  ) : (
+                                                       <UnCheckedCheckbox
+                                                            handleClick={
+                                                                 toggleSelectInput
+                                                            }
+                                                            identifier="4"
+                                                       />
+                                                  )}
+                                                  The Loyalists
+                                             </p>
+                                             <p>
+                                                  {toggleSelect["5"] ? (
+                                                       <CheckboxIcon
+                                                            handleClick={
+                                                                 toggleSelectInput
+                                                            }
+                                                            identifier="5"
+                                                       />
+                                                  ) : (
+                                                       <UnCheckedCheckbox
+                                                            handleClick={
+                                                                 toggleSelectInput
+                                                            }
+                                                            identifier="5"
+                                                       />
+                                                  )}
+                                                  The Corporates
+                                             </p>
+                                        </div>
+                                   </article>
                                    <p
                                         style={{
                                              color: "#000",
