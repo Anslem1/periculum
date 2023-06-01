@@ -116,6 +116,7 @@
 .input-sort-container {
      display: flex;
      justify-content: space-between;
+     flex-wrap: wrap;
 }
 .input-sort-container > div:nth-of-type(2) > p {
      display: flex;
@@ -160,7 +161,7 @@
      position: absolute;
      background-color: #fff;
      top: 70px;
-
+     z-index: 99;
      width: 100%;
      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
@@ -179,6 +180,7 @@
 .search-customer-container > div > div > label {
      font-family: Manrope;
      font-size: 15px;
+     font-weight: 700;
 }
 .search-customer-container > div > div:nth-of-type(2) {
      display: flex;
@@ -188,7 +190,7 @@
 }
 .search-customer-container > div > div:nth-of-type(2) > p {
      font-family: Manrope;
-     font-size: 15px;
+     /* font-size: 1px; */
 }
 .search-customer-container > div > div:nth-of-type(2) > div {
      display: flex;
@@ -197,6 +199,7 @@
 .search-customer-container > div > div:nth-of-type(2) > div label {
      font-family: Manrope;
      margin-right: 10px;
+     font-weight: 600;
 }
 
 .search-customer-container > div input {
@@ -204,6 +207,7 @@
      border: 1px solid rgba(64, 123, 255, 1);
      padding: 10px;
      border-radius: 6px;
+     background-color: #fff;
 }
 
 .search-customer-container button {
@@ -221,6 +225,8 @@
      width: 250px;
      outline: none;
      border: none;
+     background-color: #fff;
+     /* border: 1px solid; */
 }
 
 .input-with-icon-container > input::placeholder {
@@ -251,6 +257,7 @@
 .customer-info-header p {
      font-family: Manrope;
      font-size: 18px;
+     font-weight: 700;
 }
 
 .customer-data-container {
@@ -271,16 +278,15 @@
      right: 0;
      bottom: -5px;
 }
-.customer-data-container > section > div > div {
-     /* top: 0; */
-}
+
 .customer-data-container > section > div > div > p {
      font-family: Manrope;
-     font-weight: 500;
+     font-weight: 600;
      width: 100px;
      text-align: center;
      padding-bottom: 10px;
-     /* border: 1px solid; */
+     white-space: nowrap;
+
      cursor: pointer;
 }
 
@@ -298,7 +304,7 @@
 }
 .customer-data-container > div > div p {
      font-family: Manrope;
-     font-weight: 500;
+     font-weight: 600;
      text-align: start;
 }
 .customer-data-container > div > div div {
@@ -329,8 +335,9 @@
 .pagination-container p {
      font-size: 18px;
 }
-
-
+.current-active {
+     color: rgba(64, 123, 255, 1);
+}
 
 .pagination-container div {
      display: flex !important;
@@ -390,4 +397,130 @@
 
 .customers-report-bank-data-page {
      background-color: rgba(233, 238, 255, 1);
+}
+
+@media screen and (max-width: 1400px) {
+     .report-container {
+          grid-template-columns: 2fr 15fr 0.5fr;
+          position: absolute;
+          width: 95%;
+          right: 0;
+     }
+     .report-container > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+     }
+     .report-container > h1 {
+          width: 50%;
+          font-size: 15px;
+     }
+     .customer-data-container {
+          overflow: scroll;
+          /* width: 90%; */
+     }
+     .customer-data-container::-webkit-scrollbar {
+          display: none;
+     }
+
+     .customer-data-container > div > div {
+          padding: 5px 0 5px 0px;
+     }
+     .customer-data-container > section {
+          border-bottom: 5px solid rgba(250, 251, 252, 1);
+          position: relative;
+          padding: 30px;
+     }
+     .input-sort-container {
+          flex-direction: column;
+     }
+
+     .customer-info-header p {
+          font-family: Manrope;
+          font-size: 13px;
+     }
+}
+
+@media screen and (max-width: 800px) {
+     .report-container {
+          display: grid;
+          grid-template-columns: 2fr 15fr 0.5fr;
+          height: 100vh;
+          overflow-y: scroll;
+     }
+
+     .customer-info-header {
+          overflow: scroll;
+          gap: 20px;
+     }
+     .customer-data-container {
+          overflow: scroll;
+     }
+     .report-container > div > div h1 {
+          font-size: 25px;
+          width: 50%;
+     }
+     .category {
+          padding: 10px;
+     }
+     .customer-data-container > div > p {
+          font-size: 13px;
+     }
+     .customer-data-container > div > div p {
+          font-size: 13px !important;
+     }
+     .bank-profile-container > h1 {
+          font-size: 15px !important;
+     }
+
+     .input-sort-container > div p {
+          padding: 15px 25px;
+     }
+     .input-with-icon-container > input {
+          /* background-color: green; */
+          padding: 15px 25px;
+     }
+     .input-sort-container > div span {
+          padding: 10px 20px;
+     }
+     .icon-container {
+          padding: 5px;
+     }
+     .input-sort-container > div:nth-of-type(2) > p {
+          padding: 5px 15px;
+     }
+}
+@media screen and (max-width: 700px) {
+     .report-container {
+          left: 40px;
+          right: 0;
+     }
+         .report-container {
+          display: grid;
+          grid-template-columns: 3fr 15fr 0.5fr;
+          height: 100vh;
+          overflow-y: scroll;
+     }
+}
+@media screen and (max-width: 600px) {
+   
+          .report-container {
+          display: grid;
+          grid-template-columns: 4fr 15fr 0.5fr;
+          height: 100vh;
+          overflow-y: scroll;
+     }
+}
+@media screen and (max-width: 500px) {
+     .customer-data-container {
+          overflow: scroll;
+          width: 100%;
+          margin: 0;
+     }
+          .report-container {
+          display: grid;
+          grid-template-columns: 5fr 15fr 0.5fr;
+          height: 100vh;
+          overflow-y: scroll;
+     }
 }

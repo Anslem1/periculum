@@ -122,7 +122,7 @@ function Select(): JSX.Element {
                          </div>
                     </section>
 
-                    <div>
+                    <div className={`${showSegmentOverlay && 'show-date'}`}>
                          <p>Loan Data Period </p>
                          <CalendarIcon
                               handleClick={() =>

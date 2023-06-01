@@ -251,6 +251,7 @@
           /* width: 90%; */
      }
 }
+
 @media screen and (max-width: 850px) {
      .home-container {
           width: 88%;
@@ -292,21 +293,23 @@
           grid-template-columns: 1fr;
      }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 620px) {
+     .home-container {
+          width: 84%;
+     }
+}
+@media screen and (max-width: 510px) {
      .home-container {
           width: 80%;
      }
-     .average-component-container > div {
-     }
+
      .chart-container > div {
           width: 85.6%;
      }
      .pillar-distribution-container > div {
           grid-template-columns: 1fr;
-          /* width: 90%; */
      }
      .pillar-distribution-container > div > div {
           padding: 0;
-          /* width: 90%; */
      }
 }

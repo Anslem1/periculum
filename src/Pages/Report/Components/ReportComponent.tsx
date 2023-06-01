@@ -294,11 +294,8 @@ const ReportComponent: React.FC<ReportProps> = ({
           return (
                <>
                     <div className="new-customer-container"></div>
-                    <div
-                         className="new-customer-content"
-                         onClick={() => setShowSort(false)}
-                    >
-                         <div>
+                    <div className="new-customer-content">
+                         <div onClick={() => setShowSort(false)}>
                               <div className="sort-container">
                                    <p
                                         style={{
@@ -587,7 +584,6 @@ const ReportComponent: React.FC<ReportProps> = ({
                {isPaymentSuccess && <PaymentSuccessOverlay />}
                {showSort && <SortOverlay />}
                <div className={`report-container`}>
-                    {/* {JSON.stringify(filteredAccounts)} */}
                     <div className="prop-div"></div>
                     <div>
                          <div>
@@ -626,67 +622,65 @@ const ReportComponent: React.FC<ReportProps> = ({
                                    </p>
                               </div>
                          </div>
-                         <div className={`customer-data-container  ${header}`}>
-                              {
-                                   <section>
-                                        <div>
-                                             <div>
-                                                  <p
-                                                       className={
-                                                            activeTab === "All"
-                                                                 ? "status-active"
-                                                                 : ""
-                                                       }
-                                                       onClick={() =>
-                                                            findAccountStatus(
-                                                                 "All",
-                                                                 "All"
-                                                            )
-                                                       }
-                                                  >
-                                                       All
-                                                  </p>
-                                             </div>
-                                             <div>
-                                                  <p
-                                                       className={
-                                                            activeTab ===
-                                                            "Active"
-                                                                 ? "status-active"
-                                                                 : ""
-                                                       }
-                                                       onClick={() =>
-                                                            findAccountStatus(
-                                                                 "Active",
-                                                                 "Active"
-                                                            )
-                                                       }
-                                                  >
-                                                       Active
-                                                  </p>
-                                             </div>
-                                             <div>
-                                                  <p
-                                                       className={
-                                                            activeTab ===
-                                                            "Dormant"
-                                                                 ? "status-active"
-                                                                 : ""
-                                                       }
-                                                       onClick={() =>
-                                                            findAccountStatus(
-                                                                 "Dormant",
-                                                                 "Dormant"
-                                                            )
-                                                       }
-                                                  >
-                                                       Dormant
-                                                  </p>
-                                             </div>
-                                        </div>
-                                   </section>
-                              }
 
+                         <div className={`customer-data-container  ${header}`}>
+                              <section>
+                                   <div>
+                                        <div>
+                                             <p
+                                                  className={
+                                                       activeTab === "All"
+                                                            ? "status-active"
+                                                            : ""
+                                                  }
+                                                  onClick={() =>
+                                                       findAccountStatus(
+                                                            "All",
+                                                            "All"
+                                                       )
+                                                  }
+                                             >
+                                                  All
+                                             </p>
+                                        </div>
+                                        <div>
+                                             <p
+                                                  className={
+                                                       activeTab === "Active"
+                                                            ? "status-active"
+                                                            : ""
+                                                  }
+                                                  onClick={() =>
+                                                       findAccountStatus(
+                                                            "Active",
+                                                            "Active"
+                                                       )
+                                                  }
+                                             >
+                                                  Active
+                                             </p>
+                                        </div>
+                                        <div>
+                                             <p
+                                                  className={
+                                                       activeTab === "Dormant"
+                                                            ? "status-active"
+                                                            : ""
+                                                  }
+                                                  onClick={() =>
+                                                       findAccountStatus(
+                                                            "Dormant",
+                                                            "Dormant"
+                                                       )
+                                                  }
+                                             >
+                                                  Dormant
+                                             </p>
+                                        </div>
+                                   </div>
+                              </section>
+
+                              {/* <div> */}
                               <div className="customer-info-header">
                                    <p>CUSTOMER NAME</p>
                                    <p>CUSTOMER ID</p>
@@ -768,6 +762,7 @@ const ReportComponent: React.FC<ReportProps> = ({
                                         </div>
                                    </div>
                               </div>
+                              {/* </div> */}
                          </div>
                          {
                               <div className="bank-profile-container">
