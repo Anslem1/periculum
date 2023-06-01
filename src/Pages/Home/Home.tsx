@@ -89,11 +89,36 @@ const Home: React.FC = () => {
                          <div className="pillar-distribution-container">
                               <h1>PILLAR DISTRIBUTION</h1>
                               <div>
-                                   <BarChart text={"The Agric Client"} />
-                                   <BarChart text={"The Micro Techs"} />
-                                   <BarChart text={" The Corporates"} />
-                                   <BarChart text={"The Retail Tech"} />
-                                   <BarChart text={" The Loyalists"} />
+                                   <BarChart
+                                        text={"The Agric Client"}
+                                        data={[
+                                             18000, 14000, 12600, 12000, 10000,
+                                        ]}
+                                   />
+                                   <BarChart
+                                        text={"The Micro Techs"}
+                                        data={[
+                                             18000, 14000, 12600, 12000, 10000,
+                                        ]}
+                                   />
+                                   <BarChart
+                                        text={" The Corporates"}
+                                        data={[
+                                             18000, 14000, 12600, 12000, 10000,
+                                        ]}
+                                   />
+                                   <BarChart
+                                        text={"The Retail Tech"}
+                                        data={[
+                                             18000, 14000, 12600, 12000, 10000,
+                                        ]}
+                                   />
+                                   <BarChart
+                                        text={" The Loyalists"}
+                                        data={[
+                                             18000, 14000, 12600, 12000, 10000,
+                                        ]}
+                                   />
                               </div>
                          </div>
                     </div>

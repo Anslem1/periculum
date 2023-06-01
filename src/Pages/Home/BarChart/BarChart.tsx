@@ -5,6 +5,7 @@ import { data } from "./data";
 
 interface BarProps {
      text: string;
+     data: number[];
 }
 
 function ChartComponent({ text }: BarProps) {
@@ -20,7 +21,7 @@ function ChartComponent({ text }: BarProps) {
 
                const config: ChartConfiguration<"bar", number[], string> = {
                     type: "bar",
-                    data: data,
+                    data,
                     options: {
                          scales: {
                               y: {
