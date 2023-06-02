@@ -62,9 +62,16 @@ const Home: React.FC = () => {
                                         Active Clients <span>(percentage)</span>
                                    </h1>
                                    <div>
-                                        <RadialChart
+                                        {/* <RadialChart
                                              data={data}
                                              labels={labels}
+                                        /> */}
+                                        <Chart
+                                             chartType="PieChart"
+                                             data={pieChartData}
+                                             options={chartOptions}
+                                             width="100%"
+                                             height="100%"
                                         />
                                    </div>
                               </div>
