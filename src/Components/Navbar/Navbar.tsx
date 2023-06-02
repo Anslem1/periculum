@@ -17,6 +17,7 @@ const Navbar: React.FC = () => {
                     <p
                          onClick={() => navigate("/")}
                          className={`${isClient && "isClient"}`}
+                         
                     >
                          {isClient && <Periculum />}
                          {isClient ? "Periculum" : "CREDIT CHART"}
