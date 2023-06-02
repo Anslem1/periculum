@@ -171,7 +171,7 @@
      display: flex;
      gap: 5px;
      font-family: Manrope;
-     font-size: 15px;
+     font-size: 13px;
      align-items: center;
 }
 .pillar-distribution-container > section span:nth-of-type(1) {
