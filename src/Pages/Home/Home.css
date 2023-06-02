@@ -165,6 +165,7 @@
 .pillar-distribution-container > section {
      display: flex;
      gap: 20px;
+     justify-content: space-between;
      margin-bottom: 20px;
 }
 .pillar-distribution-container > section p {
